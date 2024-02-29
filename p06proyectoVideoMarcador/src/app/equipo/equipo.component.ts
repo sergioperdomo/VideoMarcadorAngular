@@ -1,5 +1,5 @@
 import { NgClass, NgFor } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-equipo',
@@ -11,10 +11,20 @@ import { Component, Input, OnInit } from '@angular/core';
 export class EquipoComponent implements OnInit {
 
   @Input() equipo: any;
+  @Output() canasta: EventEmitter<any> = new EventEmitter;
 
   constructor(){}
 
   ngOnInit(): void {
       
   }
+
+  // Método que se disparara con cada botón
+  setCanasta(puntos: number, nombreJugador:string): void {
+    this.canasta.emit({
+      puntos,
+      nombreJugador
+    }); // Dentro de emit() lo que vamos es a pasarle información para que la suba al componente padre
+  }
+
 }

@@ -1,5 +1,11 @@
 <table [ngClass]="equipo.nombre"> <!--ngClass, es una forma de añadir clases css con una lógica --> 
     <tr *ngFor="let jugador of equipo.jugadores">
         <td> {{jugador.nombre}} </td><!-- Celda -->
+        <td>
+            <!-- utilizando dentro del evento click el método setCanaste -->
+            <button (click)="setCanasta(1, jugador.nombre)">Libre</button>
+            <button (click)="setCanasta(2, jugador.nombre)">Doble</button>
+            <button (click)="setCanasta(3, jugador.nombre)">Triple</button>
+        </td>
     </tr>
 </table>
