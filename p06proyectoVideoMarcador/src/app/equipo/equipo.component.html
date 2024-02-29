@@ -1,1 +1,5 @@
-<p>equipo works!</p>
+<table [ngClass]="equipo.nombre"> <!--ngClass, es una forma de añadir clases css con una lógica --> 
+    <tr *ngFor="let jugador of equipo.jugadores">
+        <td> {{jugador.nombre}} </td><!-- Celda -->
+    </tr>
+</table>
