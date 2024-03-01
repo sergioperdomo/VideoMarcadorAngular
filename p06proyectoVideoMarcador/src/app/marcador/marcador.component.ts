@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { EquipoComponent } from '../equipo/equipo.component';
+import { TopScoreComponent } from '../top-score/top-score.component';
 
 @Component({
   selector: 'app-marcador',
   standalone: true,
-  imports: [EquipoComponent],
+  imports: [EquipoComponent, TopScoreComponent],
   templateUrl: './marcador.component.html',
   styleUrl: './marcador.component.css'
 })

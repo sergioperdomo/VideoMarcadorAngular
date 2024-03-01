@@ -1,0 +1,14 @@
+<table class="top-score">
+    <h1>Top Score</h1>
+    <!-- FIla -->
+    <tr *ngFor = "let jugador of jugadores"> <!-- recorrerenos los jugadores de este componente -->
+        <!-- celda -->
+        <td>
+            <img [src]="jugador.imagen" alt="Imagen del Jugador"> <!-- [src] Property Binding-->
+            {{ jugador.nombre }}
+        </td>
+        <td>
+            {{ jugador.puntos }}
+        </td>
+    </tr>
+</table>

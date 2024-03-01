@@ -27,4 +27,4 @@ export class EquipoComponent implements OnInit {
     }); // Dentro de emit() lo que vamos es a pasarle información para que la suba al componente padre
   }
 
-}
+} 
